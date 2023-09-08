@@ -1,0 +1,444 @@
+/* Root  */
+:root {
+  /* Colors */
+  --greenish-orange: #fc724d;
+  --blueish-black: #252b42;
+  --greyish-black: #737373;
+  --neutral-white: #ffffff;
+  /* Font Weights */
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  /* Font Sizes */
+  --fsz-300: 1.2rem;
+  --fsz-400: 1.4rem;
+  --fsz-500: 1.6rem;
+  --fsz-600: 2rem;
+  --fsz-700: 2.4rem;
+  --fsz-800: 4rem;
+  --fsz-900: 5.8rem;
+  /* SPACING  */
+  --spc-300: 20px;
+  --spc-400: 30px;
+  --spc-500: 40px;
+  --spc-600: 50px;
+  --spc-700: 60px;
+  --spc-800: 70px;
+  /* Font Family */
+  --ff-primary: Montserrat, sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-block-size: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-inline-size: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.btn {
+  border: 5px;
+  padding: .3em 1.5em;
+}
+
+/* Basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 70%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fsz-400);
+  font-weight: var(--fw-400);
+  line-height: 1.5;
+  background-color: var(--neutral-white);
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Color Classes */
+.greenish-orange {
+  color: var(--greenish-orange);
+}
+
+.blueish-black {
+  color: var(--blueish-black);
+}
+
+.greyish-black {
+  color: var(--greyish-black);
+}
+
+.neutral-white {
+  color: var(--neutral-white);
+}
+
+/* Font Weight Classes */
+.fw-400 {
+  font-weight: var(--fw-400);
+}
+
+.fw-700 {
+  font-weight: var(--fw-700);
+}
+
+/* Font Size Classes */
+.fsz-300 {
+  font-size: var(--fsz-300);
+}
+
+.fsz-400 {
+  font-size: var(--fsz-400);
+}
+
+.fsz-500 {
+  font-size: var(--fsz-500);
+}
+
+/* Spacer Classes */
+.mb-300 {
+  margin-bottom: var(--spc-300);
+}
+
+.mb-400 {
+  margin-bottom: var(--spc-400);
+}
+
+.mb-500 {
+  margin-bottom: var(--spc-500);
+}
+
+.mb-600 {
+  margin-bottom: var(--spc-600);
+}
+
+.mb-700 {
+  margin-bottom: var(--spc-700);
+}
+
+.mb-800 {
+  margin-bottom: var(--spc-800);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-700);
+}
+
+h4 {
+  font-weight: var(--fw-400);
+}
+
+h1 {
+  font-size: var(--fsz-900);
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: var(--fsz-800);
+}
+
+h3 {
+  font-size: var(--fsz-700);
+}
+
+h4 {
+  font-size: var(--fsz-600);
+}
+
+h5 {
+  font-size: var(--fsz-500);
+}
+
+h6 {
+  font-size: var(--fsz-400);
+}
+
+/* ----------------------------- Reusable Codes ----------------------------- */
+section {
+  padding-block: 5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   HEADER                                   */
+/* -------------------------------------------------------------------------- */
+#header {
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  background: linear-gradient(to right, #ffffff00, #73737300);
+}
+
+#header.header-active {
+  transition: 300ms ease-in;
+  position: fixed;
+  background: linear-gradient(to right, #ffffffe3, rgba(177, 174, 174, 0.911));
+}
+
+#header.container {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 3em;
+  justify-content: flex-start;
+}
+
+.main-nav>li {
+  padding: 4px 15px;
+}
+
+.main-nav>li:hover {
+  cursor: pointer;
+}
+
+.main-nav>li:hover a {
+  color: var(--blueish-black);
+  border-bottom: 2px solid var(--greyish-black);
+}
+
+.btn-sign-up {
+  background-color: var(--greenish-orange);
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.btn-login {
+  padding: .5em 1.3em;
+  background-color: #ffffff79;
+  border: 1px solid rgba(255, 255, 255, 0.534);
+  border-radius: 4px;
+
+}
+
+.btn-login:hover {
+  transition: 300ms;
+  border: 1px solid rgba(0, 0, 0, 0.534);
+  background-color: #ffffff2d;
+  color: var(--neutral-white);
+}
+
+.nav-right-items {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Hero-Section                                */
+/* -------------------------------------------------------------------------- */
+section#hero {
+  height: 100vh;
+  background-size: cover;
+  background: linear-gradient(to right, #ffffff, #ffffff00), url("../images/hero-3-cover\ sec-.png") no-repeat;
+  background-size: cover;
+  position: relative;
+  top: -70px;
+  left: 0;
+}
+#hero h5::before {
+  display: none;
+}
+.hero-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30%;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5em;
+}
+
+.btn-sign-up-extends {
+  padding: 1.2em 4em;
+}
+
+.btn-sign-up:hover,
+.btn-sign-up-extends:hover {
+  background-color: var(--neutral-white);
+  color: var(--blueish-black);
+  transition: all 500ms;
+}
+
+.btn-learn-more {
+  border: 1px solid var(--greenish-orange);
+  border-radius: 4px;
+  transition: 300ms;
+  padding: 1.2em 4em;
+}
+
+.btn-learn-more:hover {
+  background-color: var(--blueish-black);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Impression Section                             */
+/* -------------------------------------------------------------------------- */
+section#impressions {
+  height: 100%;
+}
+
+h5 {
+  line-height: 1;
+}
+
+#impressions p {
+  line-height: 1.3;
+}
+
+h5::before {
+  content: "";
+  width: 70px;
+  height: 2px;
+  position: absolute;
+  background-color: var(--blueish-black);
+  margin-top: 2.5rem;
+}
+
+.impression-headings {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-bottom: 10rem;
+}
+
+.impression-cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+  height: 300px;
+  width: 240px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 250ms ease;
+}
+
+.card:hover {
+  background-color: var(--greenish-orange);
+  cursor: pointer;
+  color: var(--neutral-white);
+}
+
+.card:hover h5::before {
+  background-color: var(--neutral-white);
+}
+
+.card:hover p {
+  color: var(--neutral-white);
+}
